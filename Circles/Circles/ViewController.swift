@@ -19,18 +19,16 @@ class ViewController: UIViewController {
         let circleCenter = view.center // CGPoint(x: viewWidth/2, y: viewHeight/2)
         
         // radius of circle that touches 2 screen edges on longer axis
-        let circleRadiusTwoScreenEdgesOnLongerAxis = CGFloat(fmax(viewWidth/2, viewHeight/2))
+        let circleRadiusTwoScreenEdgesOnLongerAxis: CGFloat = fmax(viewWidth/2, viewHeight/2)
         
         // radius of circle that touches 2 screen edges on shorter axis
-        let circleRadiusTwoScreenEdgesOnShorterAxis = CGFloat(fmin(viewWidth/2, viewHeight/2))
+        let circleRadiusTwoScreenEdgesOnShorterAxis: CGFloat = fmin(viewWidth/2, viewHeight/2)
 
         
         // radius of circle that touches 4 screen corners
-        let circleRadiusFourScreenCorners = CGFloat(
-            sqrt(
+        let circleRadiusFourScreenCorners: CGFloat = sqrt(
                 pow(viewWidth/2, 2) + pow(viewHeight/2, 2)
             )
-        )
         
         // http://stackoverflow.com/questions/29616992/how-do-i-draw-a-circle-in-ios-swift
         
@@ -67,7 +65,7 @@ class ViewController: UIViewController {
         shapeLayer2.fillColor = UIColor.green.cgColor
         
         // Small circle using oval in rect
-        let rectWidth = CGFloat(200)
+        let rectWidth: CGFloat = 200
         let circlePath3 = UIBezierPath(
             ovalIn: CGRect(
                 x: (viewWidth - rectWidth)/2,
